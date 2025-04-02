@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    border: 2px solid #ddd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.selected {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.card.used {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.card-value {
+    font-size: 28px;
+}
+
+.card-suit {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.heart, .diamond {
+    color: #E53935;
+}
+
+.spade, .club {
+    color: #212121;
+}
+
+.expression-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid #ddd;
+}
+
+.operators-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.operator {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.operator:hover {
+    background-color: #1976D2;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-btn {
+    background-color: #FF9800;
+    color: white;
+}
+
+#reset-btn:hover {
+    background-color: #F57C00;
+}
+
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#submit-btn:hover {
+    background-color: #388E3C;
+}
+
+#new-game-btn {
+    background-color: #9C27B0;
+    color: white;
+}
+
+#new-game-btn:hover {
+    background-color: #7B1FA2;
+}
+
+.result-container {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    min-height: 60px;
+    font-size: 18px;
+}
+
+.success {
+    background-color: #E8F5E9;
+    color: #388E3C;
+    border: 1px solid #C8E6C9;
+}
+
+.error {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #FFCDD2;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 70px;
+        height: 100px;
+        font-size: 18px;
+    }
+    
+    .card-value {
+        font-size: 22px;
+    }
+    
+    .card-suit {
+        font-size: 24px;
+    }
+    
+    .operator {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .control-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+.result-item {
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.result-item.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.result-item.error {
+    background-color: #ffebee;
+    color: #c62828;
+}
